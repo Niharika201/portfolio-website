@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Page Title -->
+    <title>Maram Niharika Yadav | Portfolio</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+</head>
+<body>
+  <!-- Header with logo and navigation links -->
+    <header>
+        <div class="logo">MN</div>
+        <nav>
+            <button id="darkModeToggle" class="toggle-btn">🌙</button>
+
+            <a href="#" id="home-link">Home</a>
+            <a href="#" id="about-link">About</a>
+            <a href="#" id="skills-link">Skills</a>
+            <a href="#" id="projects-link">Projects</a>
+            <a href="#" id="contact-link">Contact</a>
+            </nav>
+    </header>
+    <main>
+       <!-- Home/Intro Section -->
+
+        <section class="intro" id="home-section">
+            <div class="intro-container">
+              <div class="intro-text">
+                <button class="welcome">Welcome to my Portfolio</button>
+                <h1>Hi! I'm Maram Niharika Yadav</h1>
+                <h2>Aspiring Full-Stack Developer</h2>
+                <p>I love exploring AI tools, building interactive web apps, and solving real-world problems with tech.</p>
+                <a class="resume-btn" href="assets/Maram-Niharika-Resume.pdf" download>Download Resume</a>
+              </div>
+              
+            </div>
+          </section>
+           <!-- Dynamic Typing Text -->
+          <span id="typed"></span>
+
+          
+<!-- About Section -->
+        <section class="hidden about-section" id="about-section">
+            <h2>About Me</h2>
+            <p>Aspiring Full-Stack Developer and AI enthusiast, currently pursuing B.Tech in Computer Science with a strong academic foundation and hands-on project experience. Eager to contribute to innovative, tech-driven environments by leveraging my skills in web development, problem-solving, and AI tools to build scalable and user-centric solutions.</p>
+        </section>
+<!-- Skills Section -->
+
+        <section class="hidden skills-section" id="skills-section">
+            <h2>My Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Programming:</strong> Java, Python</li>
+                <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Database:</strong> MySQL</li>
+                <li><strong>Tools:</strong> Git,Github,Visual Studio code</li>
+            </ul>
+        </section>
+        <!-- Projects Section -->
+
+        <section class="hidden projects-section" id="projects-section">
+            <h2>Projects</h2>
+            <ul class="skills-list">
+                <li><strong>Quick Fix:</strong> AI-Powered Home Maintenance Web App using PHP, Java, and MySQL</li>
+                <ul>
+<li>Designed and developed a full-stack web application to simplify home maintenance by connecting 
+users with nearby verified technicians. </li>
+<li>Built a smart AI-powered chatbot that provides step-by-step DIY troubleshooting for common 
+household issues (e.g., AC not cooling), with video support and solution suggestions. </li>
+<li>Integrated intelligent fallback mechanism to recommend relevant technicians when AI 
+troubleshooting is insufficient. </li>
+<li>Developed a responsive frontend using HTML, CSS, and JavaScript; implemented robust backend 
+with Java and MySQL for seamless data handling and service management. </li>
+<li>Ensured secure user data handling, enhancing overall user satisfaction and operational efficiency. </li>
+</ul>
+                <li><strong>Crime File Management:</strong> Python, Flask, MySQL based web app for crime reporting</li>
+                <ul>
+                    <li>Developed a full-stack web application to streamline crime reporting and management, improving 
+data transparency and citizen engagement. </li>
+<li>Designed user-friendly interfaces using efficient user interaction and report filing. </li>
+<li>Enabled admin panel functionality for reviewing, updating, and managing case statuses. </li>
+<li>Focused on responsive design, data security, and role-based access to ensure smooth functioning </li>
+across different user levels  
+<li>Contributed to enhanced public safety and operational efficiency in crime monitoring and 
+resolution. </li>
+                </ul>
+            </ul>
+        </section>
+        <!-- Contact Section -->
+
+        <section class="hidden contact-section" id="contact-section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:maramniharikayadav@gmail.com">maramniharikayadav@gmail.com</a></p>
+            <p>Linked In: <a href="http://www.linkedin.com/in/maram-niharika-yadav-265035264">maram-niharika-yadav-265035264</a></p>
+            <p>Phone: +91-xxxxxxxx22</p>
+            <p>Location: Hyderabad</p>
+        </section>
+    </main>
+    <!-- External JS Files -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  new Typed("#typed", {
+    strings: ["Aspiring Full-Stack Developer", "Tech Enthusiast", "Problem Solver"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+  
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      // Optional: Save preference
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  
+    // Load theme on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+  
+
+
+</body>
+</html>
